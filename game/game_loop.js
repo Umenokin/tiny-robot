@@ -2,7 +2,7 @@ const readline = require('readline');
 
 const Robot = require("./robot");
 
-function runner(callback) {
+function gameLoop(callback) {
   const terminal = readline.createInterface({
     input : process.stdin,
     output : process.stdout
@@ -30,4 +30,4 @@ function runner(callback) {
   });
 }
 
-module.exports = runner;
+module.exports = gameLoop;

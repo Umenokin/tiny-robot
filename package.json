@@ -1,0 +1,23 @@
+{
+  "name": "tiny-robot",
+  "version": "0.0.2",
+  "description": "Install: `npm install`",
+  "main": "game/game.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node game/game.js",
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umenokin/tiny-robot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umenokin/tiny-robot/issues"
+  },
+  "homepage": "https://github.com/Umenokin/tiny-robot#readme"
+}

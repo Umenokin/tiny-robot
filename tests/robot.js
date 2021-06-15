@@ -1,7 +1,7 @@
 const readline = require('readline');
 
 const { assertVec2d } = require("../assert");
-const Robot = require("../robot");
+const Robot = require("../game/robot");
 
 const robot = new Robot();
 

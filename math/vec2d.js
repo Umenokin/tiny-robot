@@ -1,7 +1,4 @@
-
-function deg2rad(degrees) {
-  return degrees * (Math.PI / 180);
-}
+const { deg2rad } = require("./angle");
 
 class Vec2d {
   constructor(x = 0, y = 0) {

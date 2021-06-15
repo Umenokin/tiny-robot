@@ -1,5 +1,5 @@
 const { assertVec2d } = require("../assert");
-const Vec2d = require("../vec2d");
+const Vec2d = require("../math/vec2d");
 
 assertVec2d("make sure that Vec2d() is equal to {0, 0}", new Vec2d(), new Vec2d(0, 0));
 

@@ -1,5 +1,5 @@
 Install: `npm install`
 
-Run: `node main.js`
+Run: `npm run start`
 
-Test: `node test.js`
+Test: `npm test`

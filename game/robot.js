@@ -1,4 +1,4 @@
-const Vec2d = require("./vec2d");
+const Vec2d = require("../math/vec2d");
 
 class Robot {
   // With TypeScript of latest JS I woul use access modifiers but for current JS version would use "_"

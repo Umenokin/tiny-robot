@@ -1,11 +1,11 @@
 const readline = require('readline');
 
 const Robot = require("./robot");
-const runner = require('./game_runner');
+const gameLoop = require('./game_loop');
 
 const robot = new Robot();
 
-runner((command) => {
+gameLoop((command) => {
   switch(command) {
     case "L":
       robot.rotateLeft();
