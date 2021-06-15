@@ -48,10 +48,7 @@ class Vec2d {
   }
 
   clone() {
-    return {
-      x: this.x,
-      y: this.y
-    };
+    return new Vec2d(this.x, this.y);
   }
 }
 
