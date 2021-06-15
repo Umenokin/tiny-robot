@@ -8,7 +8,7 @@ function gameLoop(callback) {
     output : process.stdout
   });
 
-  terminal.setPrompt(
+  console.log(
 `Commands:
   L - rotate the robot to the LEFT
   R - rotate the robot to the RIGHT

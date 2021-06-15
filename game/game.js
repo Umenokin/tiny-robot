@@ -9,21 +9,21 @@ gameLoop((command) => {
   switch(command) {
     case "L":
       robot.rotateLeft();
-      console.log('# ==\n# Rotate the robot to the LEFT\n# ==\n');
+      console.log('# Rotate the robot to the LEFT');
       break;
 
     case "R":
       robot.rotateRight();
-      console.log('# ==\n# Rotate the robot to the RIGHT\n# ==\n');
+      console.log('# Rotate the robot to the RIGHT');
       break;
 
     case "M":
       robot.move()
-      console.log('# ==\n# MOVE the robot to', robot.position, "\n# ==\n");
+      console.log(`# MOVE the robot to {${Math.round(robot.position.x)}, ${Math.round(robot.position.y)}}`);
       break;
 
     case "Q":
-      console.log('# ==\n# Exit the game\n# ==\n');
+      console.log('# Exit the game');
       process.exit(0);
       break;
 
