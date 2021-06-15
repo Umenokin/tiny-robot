@@ -23,10 +23,8 @@ class Vec2d {
   normalize() {
     const len = this.len;
 
-    return {
-      x: this.x / len,
-      y: this.y / len
-    }
+    this.x = this.x / len;
+    this.y = this.y / len;
   }
 
   rotate(degrees) {
