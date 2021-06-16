@@ -1,8 +1,8 @@
-const readline = require('readline');
+import * as readline from "readline";
 
-const Robot = require("./robot");
+type GameLoopCallback = (command: string) => void;
 
-function gameLoop(callback) {
+export default function gameLoop(callback: GameLoopCallback) {
   const terminal = readline.createInterface({
     input : process.stdin,
     output : process.stdout

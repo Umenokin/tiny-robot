@@ -1,7 +1,5 @@
-const readline = require('readline');
-
-const Robot = require("./robot");
-const gameLoop = require('./game_loop');
+import Robot from "./robot";
+import gameLoop from "./gameLoop";
 
 const robot = new Robot();
 

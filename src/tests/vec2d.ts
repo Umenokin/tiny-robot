@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const Vec2d = require('../math/vec2d');
+import { expect } from "chai";
+import Vec2d from "../math/vec2d";
 
 const THRESHOLD = 0.0000001;
 

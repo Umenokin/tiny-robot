@@ -1,8 +1,7 @@
-const { expect } = require('chai');
+import { expect } from "chai";
 
-const Robot = require("../game/robot");
-const Vec2d = require('../math/vec2d');
-
+import Robot from "../game/robot";
+import Vec2d from  '../math/vec2d';
 
 describe("Robot", function() {
   it("test complex robot behaviour from assignment", function() {
