@@ -5,8 +5,8 @@ import UserActions from "./UserActions";
 
 const robot = new Robot();
 
-gameLoop((command) => {
-  switch (command) {
+gameLoop((userAction) => {
+  switch (userAction) {
     case UserActions.RotateLeft:
       robot.rotateLeft();
       console.log("# Rotate the robot to the LEFT");
@@ -28,6 +28,6 @@ gameLoop((command) => {
       break;
 
     default:
-      console.log(`# ==\n# Wrong command "${command}" provided\n# ==`);
+      console.log(`# ==\n# Wrong command "${userAction}" provided\n# ==`);
   }
 });
