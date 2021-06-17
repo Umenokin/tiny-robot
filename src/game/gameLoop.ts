@@ -1,14 +1,17 @@
 import * as readline from "readline";
+import ProcessCodes from "../utils/ProcessCodes";
 
 type GameLoopCallback = (command: string) => void;
 
-export default function gameLoop(callback: GameLoopCallback) {
+export default function gameLoop(callback: GameLoopCallback): void {
   const terminal = readline.createInterface({
-    input : process.stdin,
-    output : process.stdout
+    input: process.stdin,
+    output: process.stdout
   });
 
   console.log(
+  // Disable indent rule for this line to show message without redundant offsets in CL.
+  // eslint-disable-next-line @typescript-eslint/indent
 `Commands:
   L - rotate the robot to the LEFT
   R - rotate the robot to the RIGHT
@@ -19,15 +22,14 @@ export default function gameLoop(callback: GameLoopCallback) {
 
   terminal.prompt();
 
-  terminal.on('line', (command) => {
+  terminal.on("line", (command) => {
     callback(command.trim().toUpperCase());
     terminal.prompt();
   });
 
-  terminal.on('close', () => {
-    console.log('Exit the game');
-    process.exit(1);
+  terminal.on("close", () => {
+    console.log("Exit the game");
+    process.exit(ProcessCodes.ErrorExitCode);
   });
 }
 
-module.exports = gameLoop;

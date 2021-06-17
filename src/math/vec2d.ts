@@ -1,9 +1,9 @@
 import { deg2rad } from "./angle";
 
 export default class Vec2d {
-  public constructor(public x = 0, public y: any = 0) {}
+  constructor(public x = 0, public y: any = 0) {}
 
-  public set(x: number, y: number) {
+  public set(x: number, y: number): void {
     this.x = x;
     this.y = y;
   }
@@ -18,10 +18,10 @@ export default class Vec2d {
   }
 
   public normalize(): void {
-    const len = this.len;
+    const { len } = this;
 
-    this.x = this.x / len;
-    this.y = this.y / len;
+    this.x /= len;
+    this.y /= len;
   }
 
   public rotate(degrees: number): void {

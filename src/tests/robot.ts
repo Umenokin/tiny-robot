@@ -1,10 +1,10 @@
 import { expect } from "chai";
 
 import Robot from "../game/robot";
-import Vec2d from  '../math/vec2d';
+import Vec2d from "../math/vec2d";
 
-describe("Robot", function() {
-  it("test complex robot behaviour from assignment", function() {
+describe("Robot", () => {
+  it("test complex robot behaviour from assignment", () => {
     const robot = new Robot();
 
     expect(robot.position, "initial position expected to be { 0, 0 }").to.be.deep.equal(new Vec2d(0, 0));

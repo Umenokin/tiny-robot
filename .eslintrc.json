@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "favoritemedium-typescript"
+  ],
+  // This linter is very strict and "Deny by default"
+  // and intended to be weakened per project basics
+  "rules": {
+    "no-console": 0,
+    "no-underscore-dangle": 0,
+    "@typescript-eslint/naming-convention": 0,
+    "@typescript-eslint/no-magic-numbers": 0, // Switch off this rule, because we will use enums instead
+    "@typescript-eslint/quotes": ["error", "double", { "allowTemplateLiterals": true }]
+  },
+  "overrides": [{
+    "files": ["src/**/*.ts"],
+    "parser": "@typescript-eslint/parser"
+  }]
+}
