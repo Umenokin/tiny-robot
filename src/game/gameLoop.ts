@@ -10,16 +10,13 @@ export default function gameLoop(callback: GameLoopCallback): void {
     output: process.stdout
   });
 
-  console.log(
-  // Disable indent rule for this line to show message without redundant offsets in CL.
-  // eslint-disable-next-line @typescript-eslint/indent
-`Commands:
-  L - rotate the robot to the LEFT
-  R - rotate the robot to the RIGHT
-  M - move the robot in current direction
-  Q - exit the game
-`
-  );
+  console.log([
+    "Commands:",
+    "  L - rotate the robot to the LEFT",
+    "  R - rotate the robot to the RIGHT",
+    "  M - move the robot in current direction",
+    "  Q - exit the game"
+  ].join("\n"));
 
   terminal.prompt();
 
