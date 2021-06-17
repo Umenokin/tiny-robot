@@ -1,7 +1,8 @@
 import * as readline from "readline";
 import ProcessCodes from "../utils/ProcessCodes";
+import UserActions from "./UserActions";
 
-type GameLoopCallback = (command: string) => void;
+type GameLoopCallback = (command: UserActions) => void;
 
 export default function gameLoop(callback: GameLoopCallback): void {
   const terminal = readline.createInterface({
@@ -23,7 +24,7 @@ export default function gameLoop(callback: GameLoopCallback): void {
   terminal.prompt();
 
   terminal.on("line", (command) => {
-    callback(command.trim().toUpperCase());
+    callback(command.trim().toUpperCase() as UserActions);
     terminal.prompt();
   });
 
